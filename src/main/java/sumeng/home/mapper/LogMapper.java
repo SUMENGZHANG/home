@@ -1,6 +1,6 @@
 package sumeng.home.mapper;
 
-import log.beans.OpLog;
+import sumeng.log.beans.OpLog;
 
 public interface LogMapper {
 

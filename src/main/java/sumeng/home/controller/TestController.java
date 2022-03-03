@@ -1,9 +1,8 @@
 package sumeng.home.controller;
 
-import log.annotation.MyLog;
-import log.beans.ReqDTO;
+
+import sumeng.log.beans.ReqDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import sumeng.home.service.TestService;
 
 @RestController
-@EnableAspectJAutoProxy(exposeProxy = true)
 @RequestMapping("/aop")
 public class TestController {
 

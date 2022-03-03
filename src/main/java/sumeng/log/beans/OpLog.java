@@ -1,4 +1,4 @@
-package log.beans;
+package sumeng.log.beans;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
