@@ -27,11 +27,13 @@ public class HelloController {
     }
 
     @PostMapping(path = "/user")
-    public User getUserById(@RequestBody User user){
-         return userMapper.selectUserById(user.getId());
+    @MyLog
+    public String getUserById(@RequestBody User user){
+         return "save user log";
     }
 
     @GetMapping("/hello2")
+    @MyLog
     public String hello2() {
 
         return "hello2";

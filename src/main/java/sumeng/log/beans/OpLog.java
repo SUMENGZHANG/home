@@ -19,4 +19,5 @@ public class OpLog {
     private String methodName;
     private String params;
     private String response;
+    private Date insert_time;
 }

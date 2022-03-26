@@ -1,6 +1,7 @@
 package sumeng.home.controller;
 
 
+import sumeng.log.MyLog;
 import sumeng.log.beans.ReqDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,9 @@ public class TestController {
 
     @Autowired
     private TestService testService;
+
     @RequestMapping(path = "/test", method = RequestMethod.POST)
+    @MyLog
     public String test(@RequestBody ReqDTO reqDTO) {
         int i = 1;   //模拟异常
         System.out.println("调用 Log测试 方法");
