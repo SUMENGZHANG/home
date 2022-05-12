@@ -1,6 +1,8 @@
 package sumeng.home.controller;
 
 
+import sumeng.delay.DelayMessage;
+import sumeng.delay.DelayMessageConsumer;
 import sumeng.log.MyLog;
 import sumeng.log.beans.ReqDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import sumeng.home.service.TestService;
 
+import java.util.concurrent.DelayQueue;
+
 @RestController
 @RequestMapping("/aop")
 public class TestController {
@@ -18,11 +22,10 @@ public class TestController {
     private TestService testService;
 
     @RequestMapping(path = "/test", method = RequestMethod.POST)
-    @MyLog
     public String test(@RequestBody ReqDTO reqDTO) {
-        int i = 1;   //模拟异常
-        System.out.println("调用 Log测试 方法");
-        return testService.get();
+        String res = testService.get();
+        return res+" success";
+
     }
 
 }
